@@ -12,6 +12,15 @@ class LocalDataStore {
 
   final String _kUrl = 'URL';
   final String _kNewRoute = 'NEW_ROUTE';
+  final String _kNeedThirdScreen = 'NEED_THIRD_SCREEN';
+
+  void setNeedThirdScreen(bool needThirdScreen) {
+    _prefsInstance?.setBool(_kNeedThirdScreen, needThirdScreen);
+  }
+
+  bool getNeedThirdScreen() {
+    return _prefsInstance?.getBool(_kNeedThirdScreen) ?? true;
+  }
 
   void setNewRoute(String newRoute) {
     _prefsInstance?.setString(_kNewRoute, newRoute);

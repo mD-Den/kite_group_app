@@ -132,10 +132,19 @@ class ProductsPageState extends State<ProductsPage> {
                         return Column(
                           children: [
                             ElevatedButton(
-                              style: const ButtonStyle(
-                                  animationDuration: Duration(seconds: 1),
-                                  padding: MaterialStatePropertyAll<
-                                      EdgeInsetsGeometry>(EdgeInsets.all(10))),
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.resolveWith<Color>(
+                                  (Set<MaterialState> states) {
+                                    if (states
+                                        .contains(MaterialState.pressed)) {
+                                      return Colors.blueAccent.shade100;
+                                    }
+                                    return Colors
+                                        .white; // Use the component's default.
+                                  },
+                                ),
+                              ),
                               onPressed: () {
                                 switch (index) {
                                   case 0:
@@ -190,6 +199,16 @@ class ProductsPageState extends State<ProductsPage> {
                   ),
                 ),
                 ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                      (Set<MaterialState> states) {
+                        if (states.contains(MaterialState.pressed))
+                          return Colors.blueAccent.shade100;
+                        return Colors.white; // Use the component's default.
+                      },
+                    ),
+                  ),
+                  focusNode: FocusNode(canRequestFocus: true),
                   onPressed: () => fakeNextScreen(),
                   child: Text(numberScreen),
                 ),

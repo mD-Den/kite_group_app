@@ -1,8 +1,10 @@
 import 'dart:developer';
 
 import 'package:firebase_remote_config/firebase_remote_config.dart';
+import 'package:kite_group_app/data/local_data_store/local_data_store.dart';
 
 Future<void> runRemoteConfig() async {
+  LocalDataStore _store = LocalDataStore();
   final remoteConfig = FirebaseRemoteConfig.instance;
   await remoteConfig.setConfigSettings(RemoteConfigSettings(
     fetchTimeout: const Duration(minutes: 1),
@@ -13,5 +15,8 @@ Future<void> runRemoteConfig() async {
 
   String color = remoteConfig.getString('color');
 
+  bool needThirdScreen = remoteConfig.getBool('third_screen');
+
   log('Remote config --- color: $color');
+  log('Remote config --- needThirdScreen: $needThirdScreen');
 }
