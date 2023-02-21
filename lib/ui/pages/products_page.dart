@@ -202,8 +202,9 @@ class ProductsPageState extends State<ProductsPage> {
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.resolveWith<Color>(
                       (Set<MaterialState> states) {
-                        if (states.contains(MaterialState.pressed))
+                        if (states.contains(MaterialState.pressed)) {
                           return Colors.blueAccent.shade100;
+                        }
                         return Colors.white; // Use the component's default.
                       },
                     ),
