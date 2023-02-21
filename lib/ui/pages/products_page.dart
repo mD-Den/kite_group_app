@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:kite_group_app/data/local_data_store/local_data_store.dart';
 import 'package:kite_group_app/ui/pages/pages.dart';
 
-import '../../config/constants.dart';
 import '../../data/models/product.dart';
+import '../../scr/config/constants.dart';
 
 class ProductsPage extends StatefulWidget {
   const ProductsPage({Key? key}) : super(key: key);
