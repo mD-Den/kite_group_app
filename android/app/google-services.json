@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "410323314718",
+    "project_id": "kitegroup-242e4",
+    "storage_bucket": "kitegroup-242e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410323314718:android:8ca22dd7adc664a893660f",
+        "android_client_info": {
+          "package_name": "com.denis.zavrin.kite.group"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410323314718-p5eql0kd5rm2c1vumogn4s2pf0d8h4rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUTdIs8ssgoeii5zPraRfkzrwcVYd47GQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410323314718-p5eql0kd5rm2c1vumogn4s2pf0d8h4rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
