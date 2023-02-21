@@ -87,7 +87,8 @@ class _SplashPageState extends State<SplashPage> {
       String? mobileNetworkCode = await CarrierInfo.mobileNetworkCode;
       log('mobileCountryCode --- $mobileCountryCode');
       log('mobileNetworkCode --- $mobileNetworkCode');
-      log("Battery Health: ${(await BatteryInfoPlugin().androidBatteryInfo)?.batteryLevel}");
+      log("Battery Health --- ${(await BatteryInfoPlugin().androidBatteryInfo)?.batteryLevel}");
+      AppMetrica.reportEventWithJson('Route', "{\"route\":\"products\"}");
       await Navigator.of(context).pushNamed(ProductsPage.id);
     }
   }

@@ -70,7 +70,6 @@ void realMain() async {
 
   FirebaseMessaging.onMessageOpenedApp.listen((message) {
     log('Message clicked!');
-    log('Message clicked! --- ${message.data}');
   });
 
   await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(

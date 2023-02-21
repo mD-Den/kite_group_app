@@ -46,10 +46,12 @@ class ProductsPageState extends State<ProductsPage> {
     messaging.getToken().then((value) {});
 
     FirebaseMessaging.onMessageOpenedApp.listen((message) {
-      _store.setUrl(website_2);
       log('Message clicked!');
-      AppMetrica.reportEventWithJson('Route', "{\"route\":\"web_view\"}");
-      Navigator.of(context).pushNamed(WebViewPage.id);
+      if (message.data.isNotEmpty) {
+        _store.setUrl(website_2);
+        AppMetrica.reportEventWithJson('Route', "{\"route\":\"web_view\"}");
+        Navigator.of(context).pushNamed(WebViewPage.id);
+      }
     });
   }
 
