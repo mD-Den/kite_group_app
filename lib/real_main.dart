@@ -7,9 +7,9 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:kite_group_app/data/local_data_store/local_data_store.dart';
-import 'package:kite_group_app/scr/config/constants.dart';
 
 import 'app.dart';
+import 'config/constants.dart';
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();

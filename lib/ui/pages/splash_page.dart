@@ -11,8 +11,8 @@ import 'package:flutter/services.dart';
 import 'package:kite_group_app/ui/pages/pages.dart';
 import 'package:kite_group_app/ui/widgets/custom_loader.dart';
 
+import '../../config/constants.dart';
 import '../../data/functions/functions.dart';
-import '../../scr/config/constants.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
